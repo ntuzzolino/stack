@@ -9,7 +9,7 @@
 6. Questions should also be sortable by date.
 7. Questions should be able to have topic tags attached to help with searching.
 8. A search bar should be available and will filter the questions based upon the query.
----------------------------------------------------------------------------------------
+
 This was the first team project we were able to work on at BCW.
 
 The app uses Firebase as its database.
@@ -18,7 +18,8 @@ Built with Angular.js 1.5.5
 This was a great project to work on because it felt like the closest thing to production code we had started on
 
 I was assigned to a group with 2 classmates I am pretty fond of.
----------------------------------------------------------------------------------------------------
+
+
 We had to use the forked files at our disposal to add, edit, and build out the rest of the functionality for our StackUnderflow and a good starting point was either the dashboard-component.js or the questions-component.js and their respective views.
 
 ###Have you ever seen an object or a building that's so symmetrical that it just felt relaxing to look at? 
