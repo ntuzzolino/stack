@@ -1,0 +1,53 @@
+<div class="main-container center-block">
+<div class="container" ng-show="$ctrl.member.$id">
+    
+        <div class="panel-heading title">Got a Question, human?</div>
+     <div class="pannel-body">
+            <form ng-submit="$ctrl.addQuestion($ctrl.newQuestion)">
+                <div class="form-group">
+                    <input placeholder="Title" type="text" class="form-control" ng-model="$ctrl.newQuestion.title">
+                </div>
+                <div class="form-group">
+                    <input placeholder="Tags: Please seperate tags by space" type="text" class="form-control" ng-model="$ctrl.newQuestion.tags">
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Questions" class="form-control" rows="5" id="comment" ng-model="$ctrl.newQuestion.body"></textarea>
+                </div>
+                <div class="center-block text-center">
+                    <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add</button>
+                    <button class="btn btn-danger" type="reset"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Clear</button>
+                </div>
+                </form>
+                </div>
+            
+        </div>
+    </div>
+
+
+
+<div class="panel-body question">
+    <div class="list" ng-repeat="question in $ctrl.list" style="margin-bottom: 20px; padding:20px 0">
+        <div class="row">
+             <div class="col-xs-2">
+                <h4>{{question.author}}</h4>
+            </div>
+             <div class="col-xs-2">
+                <img class="prof" ng-src="{{question.usr}}"/>
+            </div>
+            <div class="col-xs-2">
+                <h4>{{question.title}}</h4>
+            </div>
+            <div class="col-xs-2">
+                <ul>
+                    <li ng-repeat="tag in questions.tags track by $index">{{question.tags}}</li>
+                </ul>
+            </div>
+            <div class="col-xs-6">
+                <h4>{{question.body}}</h4>
+            </div>
+            <div class="col-xs-2">
+                <button class="btn btn-success"><a ui-sref="question({id: question.$id})"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> View</a></button>
+            </div>
+        </div>
+    </div>
+</div>
